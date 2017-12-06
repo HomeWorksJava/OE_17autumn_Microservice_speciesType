@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Species Type Manager App</title>
+    <link rel="stylesheet" href="./main.css" type="text/css">
+</head>
+
+<body>
+<script src="./speciestype.js" type="application/javascript"></script>
+
+<h1>Welcome to the app!</h1>
+
+<div id="app-container">
+    <input type="button" value="Refresh" onclick="refresh();">
+    <br>
+
+    <table id="table"></table>
+    <br>
+    <hr>
+    <br>
+    <label>Delete: </label>
+    <input type="number" id="delete-id" placeholder="ID to be deleted."
+           style="width: 20rem;">
+    <input type="button" value="Delete" onclick="deleteSpeciesType();"><br>
+    <br>
+    <hr>
+    <br>
+    <form action="">
+        <div class="inputBlock">
+            <h4>New Species Type</h4>
+        </div>
+
+        <div class="inputBlock">
+            <label for="new-name" class="labelBlock">Name</label>
+            <input type="text" id="new-name">
+        </div>
+
+        <div class="inputBlock">
+            <label for="new-description" class="labelBlock">Description</label><br>
+            <textarea name="description" id="new-description" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="inputBlock">
+            <input type="button" value="Add" onclick="post();">
+        </div>
+
+    </form>
+</div>
+
+<script>
+    init();
+</script>
+
+</body>
+</html>
