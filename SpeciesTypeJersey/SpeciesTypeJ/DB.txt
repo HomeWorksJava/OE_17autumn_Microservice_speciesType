@@ -1,0 +1,36 @@
+CREATE DATABASE Mikroszerv;
+
+use Mikroszerv;
+
+CREATE TABLE Heroes (azon int NOT NULL AUTO_INCREMENT Primary Key, name VARCHAR(30) NOT NULL, description VARCHAR(250) NOT NULL, available VARCHAR(1) NOT NULL);
+
+CREATE TABLE Species (azon int NOT NULL AUTO_INCREMENT Primary Key, name VARCHAR(30) NOT NULL, description VARCHAR(250) NOT NULL);
+
+CREATE TABLE HeroesSpecies (azon int NOT NULL AUTO_INCREMENT Primary Key, Heroazon int NOT NULL REFERENCES Heroes(azon) ON DELETE CASCADE, Speciesazon int NOT NULL REFERENCES Species(azon) ON DELETE CASCADE);
+
+INSERT INTO Species (name, description) values ('Goblin', 'Zöld es undoritó');
+INSERT INTO Species (name, description) values ('Ogre', 'Nagy és undorító');
+INSERT INTO Species (name, description) values ('Szamár', 'Szürke es buta');
+INSERT INTO Species (name, description) values ('Vámpír', 'Vérszívó');
+INSERT INTO Species (name, description) values ('Vérfarkas', 'Félig farkas félig ember');
+INSERT INTO Species (name, description) values ('Vérmedve', 'Félig medve félig ember');
+INSERT INTO Species (name, description) values ('Troll', 'Nagy és ostoba');
+INSERT INTO Species (name, description) values ('Iszapszörny', 'Undorító iszap szörny');
+INSERT INTO Species (name, description) values ('Kobold', 'Kicsi és zöld');
+INSERT INTO Species (name, description) values ('Griffmadár', 'Félig ló félig madár');
+
+INSERT INTO Heroes (name, description, available) values ('Captain Obvious', 'Mindig Obvious', 1);
+INSERT INTO Heroes (name, description, available) values ('Kung Flu', 'Mindig Beteg', 1);
+INSERT INTO Heroes (name, description, available) values ('Mr. Unsavory', 'Sosem Savory', 1);
+
+INSERT INTO Heroes (name, description, available) values ('Bogus Woman', 'A neve magáért beszél', 1);
+INSERT INTO Heroes (name, description, available) values ('Betmen', 'Batman olcsó koppintása', 1);
+
+INSERT INTO HeroesSpecies (Heroazon, Speciesazon) values (1, 1);
+INSERT INTO HeroesSpecies (Heroazon, Speciesazon) values (1, 2);
+INSERT INTO HeroesSpecies (Heroazon, Speciesazon) values (2, 3);
+INSERT INTO HeroesSpecies (Heroazon, Speciesazon) values (2, 4);
+INSERT INTO HeroesSpecies (Heroazon, Speciesazon) values (3, 5);
+INSERT INTO HeroesSpecies (Heroazon, Speciesazon) values (3, 6);
+INSERT INTO HeroesSpecies (Heroazon, Speciesazon) values (4, 7);
+INSERT INTO HeroesSpecies (Heroazon, Speciesazon) values (5, 8);
