@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <br>Hősnév módosítása<br>
+        <form action="http://localhost:8080/myapp/hero/modifyName" method="post">
+            ID: <input type="text" name="id"><br>
+            Új név: <input type="text" name="name"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <br>Hősleírás módosítása<br>
+        <form action="http://localhost:8080/myapp/hero/modifyDescription" method="post">
+            ID: <input type="text" name="id"><br>
+            Új leírás: <input type="text" name="description"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <br>Hőselérhetőség módosítása<br>
+        <form action="http://localhost:8080/myapp/hero/modifyAvailable" method="post">
+            ID: <input type="text" name="id"><br>
+            Új leírás: <input type="text" name="available"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <br>
+        <a href="http://localhost:8081/SpeciesHTML/index.html">
+            <button>Back</button>
+        </a>
+    </body>
+</html>
